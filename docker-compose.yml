@@ -1,0 +1,20 @@
+version: '3'
+     
+services:
+  master:
+    build:
+      context: ./master
+  server1:
+    image: ansible-test-node
+    build:
+      context: ./nodes
+    hostname: server1
+  server2:
+    image: ansible-test-node
+    hostname: server2
+  server3:
+    image: ansible-test-node
+    hostname: server3
+  server4:
+    image: ansible-test-node
+    hostname: server4
