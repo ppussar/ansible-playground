@@ -1,20 +1,35 @@
-version: '3'
+version: '3.2'
      
 services:
   master:
     build:
       context: ./master
+    volumes:
+      - ./master/playbooks:/playbooks:ro
   server1:
     image: ansible-test-node
     build:
       context: ./nodes
     hostname: server1
+    volumes: 
+      - /var/run/docker.sock:/var/run/docker.sock
   server2:
     image: ansible-test-node
     hostname: server2
+    volumes: 
+      - /var/run/docker.sock:/var/run/docker.sock
   server3:
     image: ansible-test-node
     hostname: server3
+    volumes: 
+      - /var/run/docker.sock:/var/run/docker.sock
   server4:
     image: ansible-test-node
     hostname: server4
+    volumes: 
+      - /var/run/docker.sock:/var/run/docker.sock
+  server5:
+    image: ansible-test-node
+    hostname: server4
+    volumes: 
+      - /var/run/docker.sock:/var/run/docker.sock

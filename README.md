@@ -6,7 +6,7 @@ Starting up control server and some nodes
 
 Connect to control server
 
-    docker exec -it ansible_master_1 bash
+    docker exec -it ansible-playground_master_1 bash
 
 Run playbook
 
