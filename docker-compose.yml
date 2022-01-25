@@ -30,6 +30,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
   server5:
     image: ansible-test-node
-    hostname: server4
+    hostname: server5
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
