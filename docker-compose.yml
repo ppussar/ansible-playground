@@ -6,6 +6,7 @@ services:
       context: ./master
     volumes:
       - ./master/playbooks:/playbooks:ro
+    container_name: master
   server1:
     image: ansible-test-node
     build:
@@ -13,23 +14,28 @@ services:
     hostname: server1
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
+    container_name: server1
   server2:
     image: ansible-test-node
     hostname: server2
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
+    container_name: server2
   server3:
     image: ansible-test-node
     hostname: server3
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
+    container_name: server3
   server4:
     image: ansible-test-node
     hostname: server4
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
+    container_name: server4
   server5:
     image: ansible-test-node
-    hostname: server4
+    hostname: server5
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
+    container_name: server5
