@@ -12,30 +12,31 @@ services:
     build:
       context: ./nodes
     hostname: server1
+    container_name: server1
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
-    container_name: server1
   server2:
     image: ansible-test-node
     hostname: server2
+    container_name: server2
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
-    container_name: server2
   server3:
     image: ansible-test-node
     hostname: server3
+    container_name: server3
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
-    container_name: server3
   server4:
     image: ansible-test-node
     hostname: server4
+    container_name: server4
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: server4
   server5:
     image: ansible-test-node
     hostname: server5
+    container_name: server5
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock
-    container_name: server5

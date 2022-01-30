@@ -2,11 +2,12 @@
 
 Starting up control server and some nodes
 
-    docker-compose up -d --build
+    docker-compose build
+    docker-compose up -d
 
 Connect to control server
 
-    docker exec -it ansible-playground_master_1 bash
+    docker exec -it master bash
 
 Run playbook
 
